@@ -5,9 +5,13 @@ on:
     branches:  [ "main" ]
   pull_request:
     branches:  [ "main" ]
-jobs:
-  build:
-    runs-on: ubuntu-latest
+
+	jobs:
+	  build:
+	    runs-on: ubuntu-latest
+
+	    container:
+	      image: maven:3.9.9-eclipse-temurin-25
 
     steps:
       - uses: actions/checkout@v6
